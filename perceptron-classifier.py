@@ -292,13 +292,10 @@ def classify_linear(xs, w, b=None):
     w = w.flatten()
     predictions = np.zeros(xs.shape[0])
 
-    # YOUR CODE HERE
     if b is None: 
         b=0.0
     else: b
     predictions = np.sign(np.dot(xs, w) + b)
-    
-    # END OF YOUR CODE
     
     return predictions
 
